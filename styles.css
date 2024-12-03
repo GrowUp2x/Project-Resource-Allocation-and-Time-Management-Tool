@@ -1,0 +1,195 @@
+/* General styles for body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Main container for layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Section headers */
+h2 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Form styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Input, select, and button styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+input[type="number"], input[type="date"] {
+    font-size: 1em;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(72, 233, 101, 0.7);
+}
+
+/* Task list styles */
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#task-list li:hover {
+    background-color: #e0f7fa;
+}
+
+/* Resource allocation chart styles */
+#resource-chart {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Project dashboard styles */
+#project-dashboard p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#project-dashboard p span {
+    font-weight: bold;
+}
+
+/* Progress bar styles */
+#progress-bar-container {
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #00796b;
+    border-radius: 25px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #task-management, #time-tracking, #resource-allocation, #project-dashboard {
+        width: 100%;
+    }
+}
+
+/* Mobile styling */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    form, #task-list, #resource-allocation, #project-dashboard {
+        width: 100%;
+    }
+
+    #resource-chart {
+        height: 300px;
+    }
+}
+
+/* Adding animations for improved UI experience */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form, #task-list, #resource-allocation, #project-dashboard {
+    animation: fadeIn 0.5s ease-in-out;
+}

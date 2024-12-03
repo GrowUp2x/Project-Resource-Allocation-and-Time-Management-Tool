@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Project Resource Allocation and Time Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Advanced Project Resource Allocation & Time Management</h1>
+    </header>
+
+    <div class="container">
+        <!-- Task Management Section -->
+        <section id="task-management">
+            <h2>Task Management</h2>
+            <form id="task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" required placeholder="Enter task name">
+                
+                <label for="employee">Assign to:</label>
+                <select id="employee" required>
+                    <option value="John">John</option>
+                    <option value="Alice">Alice</option>
+                    <option value="Bob">Bob</option>
+                </select>
+                
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" required>
+                
+                <label for="priority">Priority:</label>
+                <select id="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                
+                <button type="submit">Add Task</button>
+            </form>
+
+            <h3>Assigned Tasks</h3>
+            <ul id="task-list"></ul>
+        </section>
+
+        <!-- Resource Allocation Visualization -->
+        <section id="resource-allocation">
+            <h2>Resource Allocation</h2>
+            <canvas id="resource-chart"></canvas>
+        </section>
+
+        <!-- Time Tracking Section -->
+        <section id="time-tracking">
+            <h2>Time Tracking</h2>
+            <form id="time-tracking-form">
+                <label for="task-select">Task:</label>
+                <select id="task-select" required>
+                    <!-- Options will be dynamically populated -->
+                </select>
+                
+                <label for="time-spent">Time Spent (in hours):</label>
+                <input type="number" id="time-spent" min="0" required>
+                
+                <button type="submit">Log Time</button>
+            </form>
+        </section>
+
+        <!-- Project Health Dashboard -->
+        <section id="project-dashboard">
+            <h2>Project Health Dashboard</h2>
+            <p id="time-left">Time Left: <span>0</span> hours</p>
+            <p id="bottleneck">Bottlenecks: None</p>
+            <h3>Project Progress</h3>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
